@@ -1,0 +1,25 @@
+
+html{
+    margin: auto;
+}
+
+
+
+header{
+    text-align: center;
+}
+
+main{
+    text-align: center;
+}
+
+.producte{
+    width: 300px;
+    border: 1px solid rgb(206, 21, 21);
+    border-radius: 10px ;
+    text-align: center;
+}
+
+.producte h2{
+    font-weight: bold;
+}
