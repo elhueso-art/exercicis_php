@@ -6,9 +6,11 @@ $ivatotal = $preu *IVA;
 $nomp = 'Producte 1';
 $total = $preu + $ivatotal;
 $descripciop = 'Descripcio del producte';
-$estoc = 'Numero de unitats disponibles';
+$estoc = 'Numero de unitats disponibles:';
 $nestoc = 5;
 $ref ='CAM-123456º';
+$footer = 'footer de la tienda guay S.L';
+const MONEDA = 'EUR';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,16 +30,18 @@ $ref ='CAM-123456º';
         <article class="producte">
             <h2><?= $nomp ?></h2>
             <p class="descripcio"><?= $descripciop ?></p>
-            <p class="preu">Preu sense IVA: <?= $preu ?></p>
-            <p class="preu">IVA (21%): <?= $ivatotal ?></p>
-            <p class="total">TOTAL: <?= $total ?></p>
+            <p class="preu">Preu sense IVA: <?= $preu . ' ' . MONEDA ?></p>
+            <p class="preu">IVA (21%): <?= $ivatotal . ' ' . MONEDA ?></p>
+            <p class="total">TOTAL: <?= $total. ' ' . MONEDA ?></p>
             <p class="estoc"><?= $estoc .' '. $nestoc ?></p>
             <p class="ref"><?= $ref ?></p>
         </article>
+          <!--<?php const IVA = 1; ?> -->
     </main>
 
     <footer>
-        <p>footer de la tienda guay S.L</p>
+        
+        <p><?= $footer ?></p>
 
     </footer>
 
@@ -45,12 +49,13 @@ $ref ='CAM-123456º';
 </body>
 </html>
 
-<!-- cambiar formato a php
- subir datos al php arriba del todo del archivo
- canviar cada valor en el html per  i hacer que el IVA 
- se calcule solo 
- define las constantes IVA, BOTIGA, MONEDA I DESCOMPTE_SOCI
- con define() o const
- sustituye el index.php todos los valores fijos per los constantes
- intenta cambiar una constante a media pagina i escribe el error que te da 
+<!-- 
+ - cambiar formato a php
+ - subir datos al php arriba del todo del archivo
+ - canviar cada valor en el html per  i hacer que el IVA 
+ - se calcule solo 
+ - define las constantes IVA, BOTIGA, MONEDA I DESCOMPTE_SOCI
+ - con define() o const
+ - sustituye el index.php todos los valores fijos per los constantes
+ - intenta cambiar una constante a media pagina i escribe el error que te da 
  -->
